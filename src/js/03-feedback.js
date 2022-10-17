@@ -26,11 +26,11 @@ function onFormSubmit(evt) {
 checkFormInput();
 
 function checkFormInput() {
-  let formData1 = JSON.parse(localStorage.getItem(FORM_INPUT));
+  let formDataLocal = JSON.parse(localStorage.getItem(FORM_INPUT));
   const { email, message } = refs.form.elements;
-  if (formData1) {
-    formData = formData1;
-    email.value = formData1.email || '';
-    message.value = formData1.message || '';
+  if (formDataLocal) {
+    formData = formDataLocal;
+    email.value = formDataLocal.email || '';
+    message.value = formDataLocal.message || '';
   }
 }
